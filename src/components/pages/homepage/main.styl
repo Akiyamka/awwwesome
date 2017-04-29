@@ -1,0 +1,35 @@
+bkgColor = #140805
+  hoverColor = #70D7FF
+  activeColor = #0080B2
+  
+   @font-face 
+    font-family: JustSquare;
+    src: url(/static/JustSquare.otf)
+
+  #hero
+    background-color: bkgColor
+    overflow: hidden
+    height: 100%
+    .wrapper
+      max-width: 1200px
+      padding: 24px
+      margin: 100px auto 0
+      height: calc(100% - 100px)
+      display: flex
+      flex-flow: column nowrap
+      justify-content: space-between
+      box-sizing: border-box
+    .half
+      width: 50%
+      display: inline-block
+    h1
+      font: 62px/1.2em 'JustSquare', sans-serif
+      color: white
+      text-align: left
+
+  nav
+    color: white
+    overflow: hidden
+    display: flex
+    flex-flow: row nowrap
+    align-items: flex-end
