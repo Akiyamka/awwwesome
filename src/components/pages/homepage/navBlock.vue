@@ -1,5 +1,5 @@
 <template>
-  <div @click.self="getContentHeight" :id="'skl-' + elemId" class="skill-block">
+  <div @mouseover="getContentHeight(false)" @mouseout="getContentHeight(true)" :id="'skl-' + elemId" class="skill-block">
     <slot name="header"></slot>
     <div class="hider">
       <slot name="article"></slot>
@@ -16,12 +16,11 @@ export default {
   },
   props: ['elemId'],
   methods: {
-    getContentHeight (e) {
-      this.isOpen = !this.isOpen
+    getContentHeight (state) {
       let rootBlockSelector = '#skl-' + this.elemId.toString()
       let hider = document.querySelector(rootBlockSelector + '>div.hider')
       let content = document.querySelector(rootBlockSelector + '>div.hider>article')
-      if (this.isOpen) {
+      if (state) {
         hider.style.height = 0 + 'px'
       } else {
         hider.style.height = content.offsetHeight + 'px'
@@ -31,7 +30,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
   header
     font: 26px/1.2em 'JustSquare', sans-serif
 
@@ -49,7 +48,7 @@ export default {
     width: 31%
     article
       font: 16px/1.6em 'Exo 2', sans-serif
-      margin: 1.6em 0
+      padding: 1.6em 0
       text-align: left
       color: #7b5f58
       // height: 0
