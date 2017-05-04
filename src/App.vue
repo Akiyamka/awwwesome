@@ -34,7 +34,6 @@ body
 
 <style lang='stylus' scoped>
 header
-  background: #140805
   font-size: 0
   display: flex
   flex-flow: row wrap

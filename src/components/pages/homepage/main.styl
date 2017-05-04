@@ -1,4 +1,4 @@
-bkgColor = #140805
+  bkgColor = #0f0201
   hoverColor = #70D7FF
   activeColor = #0080B2
   
@@ -19,9 +19,13 @@ bkgColor = #140805
       flex-flow: column nowrap
       justify-content: space-between
       box-sizing: border-box
-    .half
+    .icon
       width: 100%
       display: inline-block
+      text-align: center
+      svg
+        height: 30vh
+        display: inline-block
     h1
       font: 62px/1.2em 'JustSquare', sans-serif
       color: white
@@ -33,3 +37,56 @@ bkgColor = #140805
     display: flex
     flex-flow: row nowrap
     align-items: flex-end
+
+
+// svg styles
+.illustration
+  display: flex
+  flex-flow: row nowrap
+  padding-top: 8%
+
+.cls-wide
+.cls-line
+.cls-line-secondary
+.cls-line3
+.cls-shortDash
+.cls-longDash
+  stroke: #ff4800
+  fill: none
+
+
+.cls-line
+.cls-line3
+.cls-line-secondary
+  fill: none
+  stroke-miterlimit: 10
+  stroke-width: 2px
+  stroke-dasharray: 2000
+  stroke-dashoffset: 2000
+  stroke-linejoin: round
+
+.cls-line-secondary
+  opacity: 0.2
+
+.cls-rect
+.cls-filled
+  fill: #ff4800
+  opacity: 0
+
+.cls-wide
+  stroke-width: 8px
+  opacity: 0.2
+
+.cls-shortDash
+  stroke-dasharray: 2.01 2.01
+
+.cls-longDash
+  stroke-linecap: round
+  stroke-dasharray: 12.23 12.23
+
+.cls-glow
+  stroke: #ff6d00
+  stroke-width: 4px
+  box-shadow: 0px 0px 8px 0px rgba( 255, 111, 0, 1 )
+  -webkit-filter: drop-shadow( 0px 0px 8px 0px #fff )
+  filter: drop-shadow( 0px 0px 8px 0px #fff )

@@ -51,10 +51,10 @@ export default {
       padding: 1.6em 0
       text-align: left
       color: #7b5f58
-      // height: 0
-      // opacity: 0
+      opacity: 0
       box-sizing: border-box
       overflow: hidden
+      transition: .1s ease opacity 0s
       span
         color: #a78c85
     &:last-child
@@ -62,7 +62,8 @@ export default {
     &:hover
       color: #FF4800
       border-top: 1px solid #FF4800
-      // article
-      //   height: 100px
-      //   opacity: 1
+      article
+        opacity: 1
+        transition: .3s ease opacity .2s
+
 </style>
