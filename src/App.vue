@@ -56,6 +56,7 @@ header
       font: 16px/20px 'hooge 05_55 Cyr2', sans-serif
       text-decoration: none
       padding: .5em 1em
+      display: inline-block
       &.current
         color: #FF4800
       &:hover
