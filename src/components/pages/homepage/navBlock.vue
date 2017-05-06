@@ -65,5 +65,4 @@ export default {
       article
         opacity: 1
         transition: .3s ease opacity .2s
-
 </style>

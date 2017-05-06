@@ -84,7 +84,7 @@
     </div>
     <nav class="skills" >
 
-      <navblock v-for="skill, key in skills" :key="key" :elemId="key" @click.native="runAnim(key)">
+      <navblock v-for="skill, key in skills" :key="key" :elemId="key" @mouseenter.native="runAnim(key)">
         <header slot="header"> {{ skill.header }} </header>
         <article slot="article" v-html="skill.content"> </article>
       </navblock>
