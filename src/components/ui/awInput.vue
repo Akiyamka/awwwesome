@@ -1,14 +1,15 @@
 <template>
   <section :class="[{ 'focus': isFocus }, { 'filled': value }]">
-    <label for="inpt">{{placeholder}}</label>
+    <label>{{placeholder}}</label>
     <div class="box">
       <span class="before"></span>
         <input
-          type="text"
-          id="inpt"
+          :value="value"
+          :type="type"
+          :disabled="disabled"
+          :required="required"
           @focus="isFocus = true"
           @blur="isFocus = false"
-          :value="value"
           @input="updateValue($event.target.value)">
       <span class="after"></span>
     </div>
@@ -18,7 +19,14 @@
 export default {
   props: {
     placeholder: { type: String },
-    value: { type: String }
+    value: [String, Number],
+    type: {
+      type: String,
+      default: 'text'
+    },
+    disabled: Boolean,
+    required: Boolean,
+    name: String
   },
   data () {
     return {
@@ -36,9 +44,12 @@ export default {
 <style lang='stylus' scoped>
 .box
   margin-top: 12px
+  z-index: 1
+  position: relative
 section
   position: relative
   display: inline-block
+  margin: 1em 2em 1em 0
 input
   background: none
   border: none
@@ -52,7 +63,10 @@ input
   &:focus
     outline: none
     border-bottom: 1px solid hsla(17,100%,50%,1)
-
+  &:invalid
+    outline: none
+    box-shadow: none
+    border-bottom: 1px solid hsla(3,100%,50%,1)
 label
   color: hsla(11, 52%, 68%, .3)
   position: absolute

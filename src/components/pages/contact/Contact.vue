@@ -1,9 +1,9 @@
 <template>
   <section>
       <div class="wrapper">
-        <h1>Отправьте нам сообщение</h1>
-        <aw-input placeholder="Как к вам обращаться?" v-model="test" ></aw-input>
-        <p>{{ test }}</p>
+        <h1>Задавайте ваши ответы</h1>
+        <aw-input placeholder="Как Вас величать" v-model="senderName" type="text"></aw-input>
+        <aw-input placeholder="Ваш e-email" v-model="senderMail" type="email"></aw-input>
       </div>
   </section>
 </template>
