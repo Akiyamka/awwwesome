@@ -30,7 +30,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
   header
     font: 26px/1.2em 'JustSquare', sans-serif
 

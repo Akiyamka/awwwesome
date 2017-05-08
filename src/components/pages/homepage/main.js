@@ -27,7 +27,7 @@ export default {
     }
   },
   methods: {
-    runAnim (key) {
+    runAnim (event, key) {
       this.skills[key].animation(event.target)
     },
     animBot (target) {
@@ -68,7 +68,7 @@ export default {
         }, {
           duration: 2000, easing: 'easingQuarticInOut', offset: 50
         }
-      ); console.log(drawRect)
+      );
       
 
       var drawFilled = KUTE.allFromTo(filled, {
@@ -78,7 +78,7 @@ export default {
         }, {
           duration: 1000, easing: 'easingQuarticInOut', offset: 50
         }
-      ); console.log(drawFilled)
+      );
 
       // Out animation
       var disappear = KUTE.allTo(all, {

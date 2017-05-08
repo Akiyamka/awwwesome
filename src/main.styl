@@ -1,0 +1,70 @@
+bkgColor = #0a0505
+hoverColor = #70D7FF
+activeColor = #0080B2
+mainColor = #FF4800
+
+@font-face 
+  font-family: JustSquare;
+  src: url(/static/JustSquare.otf)
+
+html
+body
+  margin: 0
+  padding: 0
+  height: 100%
+  background: url('./assets/squad.png'), bkgColor
+  font: 16px/1.6em 'Exo 2', sans-serif
+
+input,
+textarea,
+label
+  font: 16px/1.6em 'Exo 2', sans-serif
+
+h1
+  color: white
+  font: 36px/1.2em JustSquare, sans-serif
+  margin: 24px 0
+
+.wrapper
+  max-width: 1200px
+  padding: 24px
+  margin: 0 auto
+
+#app
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%
+  & > header
+    font-size: 0
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    align-items: center
+    position: absolute
+    width: 100%
+    z-index: 999
+    .logo
+      height: 34px
+      display: inline-block
+      vertical-align: middle
+      margin: 30px
+    nav
+      display: inline-block
+      font-size: 16px
+      vertical-align: -30%
+      margin: 30px
+      a
+        color: white
+        font: 16px/20px 'hooge 05_55 Cyr2', sans-serif
+        text-decoration: none
+        padding: .5em 1em
+        display: inline-block
+        &.current
+          color: mainColor
+        &:hover
+          background: mainColor
+          color: bkgColor
+        &:active
+          color: white
+    & + section
+        padding-top: 100px
