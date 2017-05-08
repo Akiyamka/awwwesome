@@ -1,13 +1,16 @@
 import awInput from '@/components/ui/awInput'
+import awTextarea from '@/components/ui/awTextarea'
 
 export default {
   data () {
     return {
       senderName: "",
-      senderMail: ""
+      senderMail: "",
+      text: ""
     }
   },
   components: {
-    awInput
+    awInput,
+    awTextarea
   }
 }
