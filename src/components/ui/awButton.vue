@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="aw-button">
     <div class="start"></div>
     <button>
       <slot></slot>
@@ -21,7 +21,7 @@ export default {
   bkgColor = #FF4800
   hoverColor = #70D7FF
   activeColor = #0080B2
-  .container
+  .aw-button
     font-size: 0
     position: relative
     display: inline-block
@@ -32,7 +32,7 @@ export default {
     .start
       display: inline-block
       background: bkgColor
-      height: 42px
+      height: 32px
       width: 10px
       &:after
         width: 10px
@@ -94,10 +94,10 @@ export default {
   button
     background: bkgColor
     border: none
-    padding: .5em 3em
+    padding: .5em 2em
     text-transform: uppercase
     color: white
-    font: 24px/28px 'hooge 05_55 Cyr2', sans-serif
+    font: 18px/24px 'hooge 05_55 Cyr2', sans-serif
     &:focus
       outline: none
 

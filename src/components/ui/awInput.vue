@@ -1,5 +1,5 @@
 <template>
-  <section :class="[{ 'focus': isFocus }, { 'filled': value }]">
+  <section :class="[{ 'focus': isFocus }, { 'filled': value }, 'aw-input']">
     <label>{{placeholder}}</label>
     <div class="box">
       <span class="before"></span>

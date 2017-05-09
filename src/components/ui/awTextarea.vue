@@ -1,5 +1,5 @@
 <template>
-  <section :class="[{ 'focus': isFocus }, { 'filled': value }]">
+  <section :class="[{ 'focus': isFocus }, { 'filled': value }, 'aw-textarea']">
       <textarea
       :value="value"
       :disabled="disabled"
@@ -49,7 +49,7 @@ export default {
 section
   padding: 12px
   transition: .2s ease padding
-  margin: 1em 2em 0 0
+  margin: 1em 0 0 0
   &.focus
   &.filled
     padding: 12px 0
