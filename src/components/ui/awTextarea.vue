@@ -1,7 +1,6 @@
 <template>
   <section :class="[{ 'focus': isFocus }, { 'filled': value }]">
       <textarea
-      cols="30" rows="10"
       :value="value"
       :disabled="disabled"
       :required="required"
@@ -13,6 +12,7 @@
   </section>
 </template>
 <script>
+import autosize from 'autosize'
 export default {
   props: {
     placeholder: String,
@@ -31,6 +31,17 @@ export default {
     updateValue (value) {
       this.$emit('input', value)
     }
+  },
+  watch: {
+    value () {
+      this.$nextTick(() => { autosize.update(this.$el) })
+    }
+  },
+  mounted () {
+    this.$nextTick(() => { autosize(this.$el.firstChild) })
+  },
+  beforeDestroy () {
+    autosize.destroy(this.$el.firstChild)
   }
 }
 </script>
@@ -38,11 +49,12 @@ export default {
 section
   padding: 12px
   transition: .2s ease padding
+  margin: 1em 2em 0 0
   &.focus
   &.filled
     padding: 12px 0
     textarea
-      padding: 0 12px
+      padding: 1em 12px
 textarea
   resize: none
   background: transparent
@@ -51,7 +63,7 @@ textarea
   width: 100%
   border-bottom: 1px solid hsla(17,100%,50%,.35)
   box-sizing: border-box
-  padding: 0
+  padding: 1em 0
   transition: .2s ease all
   &:focus
     outline: none

@@ -1,10 +1,11 @@
 <template>
   <section>
       <div class="wrapper">
-        <h1>Задавайте ваши ответы</h1>
-        <aw-input placeholder="Как Вас величать" v-model="senderName" type="text"></aw-input>
+        <h1>Отправить срочную телеграмму</h1>
+        <aw-input placeholder="Ваше имя" v-model="senderName" type="text"></aw-input>
         <aw-input placeholder="Ваш e-email" v-model="senderMail" type="email"></aw-input>
         <aw-textarea placeholder="Текст сообщения" v-model="text" ></aw-textarea>
+        <aw-button>Отправить</aw-button>
       </div>
   </section>
 </template>
