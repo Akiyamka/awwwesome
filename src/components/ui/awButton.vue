@@ -1,10 +1,14 @@
 <template>
   <div class="aw-button">
-    <div class="start"></div>
     <button>
+      <div class="border">
+        <div class="top left"></div>
+        <div class="top right"></div>
+        <div class="bottom left"></div>
+        <div class="bottom right"></div>
+      </div>
       <slot></slot>
     </button>
-    <div class="end"></div>
   </div>
 
 </template>
@@ -18,9 +22,10 @@ export default {
 </script>
 <style lang='stylus' scoped>
 
-  bkgColor = #FF4800
-  hoverColor = #70D7FF
-  activeColor = #0080B2
+  bkgColor = hsla(17,100%,50%,.2)
+  hoverColor = hsla(17,100%,50%,1)
+  activeColor = #70D7FF
+
   .aw-button
     font-size: 0
     position: relative
@@ -28,77 +33,72 @@ export default {
     box-sizing: border-box
     margin: 10px
 
-    .end
-    .start
-      display: inline-block
+    button
       background: bkgColor
-      height: 32px
-      width: 10px
-      &:after
-        width: 10px
-        height: 10px
-        background: #FF4800
-        content: ''
+      border: none
+      padding: .6em 2em
+      text-transform: uppercase
+      color: hsla(13,70%,50%,1)
+      font: 18px/24px 'hooge 05_55 Cyr2', sans-serif
+      transition: .2s ease all
+      position: relative
+      &:focus
+        outline: none
+      .border
         position: absolute
-        transition: .2s ease
-        transition-property: top, right, bottom, left
-
-    .start
-      vertical-align: top
-      &:after
-        bottom: 0
-        left: 0
-
-    .end
-      vertical-align: bottom
-      &:after
+        width: 100%
+        height: 100%
         top: 0
         right: 0
-
+        box-sizing: border-box
+        transition: .2s ease all
+        & > div
+          border: 1px solid hsla(17,100%,50%,0)
+          transition: .2s ease all
+          width: 10px
+          height: 10px
+          position: absolute
+        .left
+          border-right: none
+          left: 0
+        .right
+          border-left: none
+          right: 0
+        .top
+          border-bottom: none
+          top: 0
+        .bottom
+          border-top: none
+          bottom: 0
     // hover-state
     &:hover
-      div,
       button
         background: hoverColor
-      
-      .start:after
-      .end:after
-        background: hoverColor
-
-      .start:after
-        bottom: -10px
-        left: -10px
-
-      .end:after
-        top: -10px
-        right: -10px
-
+        color: white
+      .border
+        margin-top: -10px
+        margin-right: -10px
+        width: calc( 100% + 20px)
+        height: calc( 100% + 20px)
+        & > div
+          border: 1px solid hsla(17,100%,50%,1)
+        .left
+          border-right: none
+          left: 0
+        .right
+          border-left: none
+          right: 0
+        .top
+          border-bottom: none
+          top: 0
+        .bottom
+          border-top: none
+          bottom: 0
     // active-state
     &:active
-      div,
       button
         background: activeColor
 
-      .start:after
-      .end:after
-        background: activeColor
 
-      .start:after
-        bottom: 0
-        left: 0
-
-      .end:after
-        top: 0
-        right: 0
-
-  button
-    background: bkgColor
-    border: none
-    padding: .5em 2em
-    text-transform: uppercase
-    color: white
-    font: 18px/24px 'hooge 05_55 Cyr2', sans-serif
-    &:focus
-      outline: none
 
 </style>
