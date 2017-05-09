@@ -1,6 +1,6 @@
 <template>
-  <div class="aw-button">
-    <button>
+  <div :class="['aw-button', { 'alternate': alternate }]">
+    <button :disabled="disabled">
       <div class="border">
         <div class="top left"></div>
         <div class="top right"></div>
@@ -15,6 +15,10 @@
 <script>
 export default {
   name: 'awButton',
+  props: {
+    disabled: Boolean,
+    alternate: Boolean
+  },
   data () {
     return { }
   }
@@ -22,7 +26,7 @@ export default {
 </script>
 <style lang='stylus' scoped>
 
-  bkgColor = hsla(17,100%,50%,.2)
+  bkgColor = hsla(17,100%,50%,.1)
   hoverColor = hsla(17,100%,50%,1)
   activeColor = #70D7FF
 
@@ -42,6 +46,7 @@ export default {
       font: 18px/24px 'hooge 05_55 Cyr2', sans-serif
       transition: .2s ease all
       position: relative
+      word-spacing: 8px
       &:focus
         outline: none
       .border
@@ -99,6 +104,8 @@ export default {
       button
         background: activeColor
 
-
-
+.alternate
+  button
+    background-color: transparent
+    color: hsla(13,70%,40%,1)
 </style>
