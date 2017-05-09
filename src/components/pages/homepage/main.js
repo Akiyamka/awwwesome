@@ -11,26 +11,30 @@ export default {
         { 
           header: 'Нестандартные задачи',
           content: 'Разработка дополнений для WordPress, сложные системы расчета стоимости заказа, прокладка маршрута и прочие непростые задачи - <span> это как раз то что мы любим </span>',
-          animation: this.animRing
+          animation: this.animRing,
+          isStop: true
         },
         {
           header: 'Продвинутый Front-end',
           content: 'Полноценные <span>SPA</span> и <span>PWA</span> под Ваши задачи на базе vue.js и сопуствущего стека технологий',
-          animation: this.animFront
+          animation: this.animFront,
+          isStop: true
         },
         {
           header: 'Чатботы',
           content: 'Системы оповещения, оформления заказа, отлеживания статуса, опросов и прочего на базе чат-платформы <span>Telegram</span>',
-          animation: this.animBot
+          animation: this.animBot,
+          isStop: true
         },
       ],
     }
   },
   methods: {
     runAnim (event, key) {
-      this.skills[key].animation(event.target)
+      this.skills[key].animation(event.target, key)
+      this.skills[key].isStop = false
     },
-    animBot (target) {
+    animBot (target, key) {
       var frontIcon = document.getElementById('bot-icon')
       var lines = frontIcon.querySelectorAll('.cls-line')
       var lines2 = frontIcon.querySelectorAll('.cls-line-secondary')
@@ -69,7 +73,6 @@ export default {
           duration: 2000, easing: 'easingQuarticInOut', offset: 50
         }
       );
-      
 
       var drawFilled = KUTE.allFromTo(filled, {
           opacity: 0
@@ -80,13 +83,27 @@ export default {
         }
       );
 
+      // Since the callback 'nowAnimStoped' is triggered for each element in the variable 'all',
+      // we only need to catch the last call
+
+      var stopCallbackCounter = 0
+      var nowAnimStoped = () => {
+        setTimeout( () => {
+          stopCallbackCounter++
+          if (stopCallbackCounter == all.length) {
+            this.skills[key].isStop = true
+          }
+        }, 50) 
+      }
+
       // Out animation
       var disappear = KUTE.allTo(all, {
           opacity: 0
         }, {
+          complete: nowAnimStoped,
           duration: 800,
           easing: 'easingCubicOut',
-          offset: 100
+          offset: 100,
         }
       )
 
@@ -105,7 +122,7 @@ export default {
       }, false);
 
     },
-    animFront (target) {
+    animFront (target, key) {
       var frontIcon = document.getElementById('front-icon')
       var lines = frontIcon.querySelectorAll('.cls-line')
       var rects = frontIcon.querySelectorAll('.cls-rect')
@@ -115,11 +132,25 @@ export default {
       var drawLine = KUTE.allFromTo(lines, {draw: '0% 0%', opacity: 1 }, {draw: '0% 100%', opacity: 1 }, {duration: 3000, easing: 'easingQuarticInOut', offset: 100})
       var drawRect = KUTE.allFromTo(rects, {opacity: 0}, {opacity: 0.2}, {duration: 2000, easing: 'easingQuarticInOut', offset: 100})
 
+      // Since the callback 'nowAnimStoped' is triggered for each element in the variable 'all',
+      // we only need to catch the last call
+
+      var stopCallbackCounter = 0
+      var nowAnimStoped = () => {
+        setTimeout( () => {
+          stopCallbackCounter++
+          if (stopCallbackCounter == all.length) {
+            this.skills[key].isStop = true
+          }
+        }, 50) 
+      }
+
       // Out animation
       var disappear = KUTE.allTo(all,
         {
           opacity: 0
         }, {
+          complete: nowAnimStoped,
           duration: 600,
           easing: 'easingCubicOut',
           offset: 50
@@ -137,7 +168,7 @@ export default {
         }, false);
 
     },
-    animRing (target) {
+    animRing (target, key) {
       var ringIcon = document.getElementById('ring-icon')
       var lines = ringIcon.querySelectorAll('.cls-line')
       var longDash = ringIcon.querySelectorAll('.cls-longDash')
@@ -279,6 +310,19 @@ export default {
         }
       )
 
+      // Since the callback 'nowAnimStoped' is triggered for each element in the variable 'all',
+      // we only need to catch the last call
+
+      var stopCallbackCounter = 0
+      var nowAnimStoped = () => {
+        setTimeout( () => {
+          stopCallbackCounter++
+          if (stopCallbackCounter == all.length) {
+            this.skills[key].isStop = true
+          }
+        }, 50) 
+      }
+
       // Out animation
       var disappear = KUTE.allTo(all,
         {
@@ -286,10 +330,12 @@ export default {
         }, {
           duration: 1000,
           easing: 'easingCubicOut',
-          offset: 200
+          offset: 200,
+          complete: nowAnimStoped
         }
       )
 
+      var nowAnimStoped = function () { this.animationActive = false }
       // Starter and stoper animation
         drawLine.start();
         drawLine3.start();

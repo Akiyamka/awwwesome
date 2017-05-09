@@ -30,7 +30,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
   header
     font: 26px/1.2em 'JustSquare', sans-serif
 
@@ -46,6 +46,8 @@ export default {
     box-sizing: border-box
     text-align: left
     width: 31%
+    cursor: pointer
+    z-index: 10
     article
       font: 16px/1.6em 'Exo 2', sans-serif
       padding: 1.6em 0
@@ -55,7 +57,7 @@ export default {
       box-sizing: border-box
       overflow: hidden
       transition: .1s ease opacity 0s
-      span
+      & > span
         color: #a78c85
     &:last-child
       margin: 0
