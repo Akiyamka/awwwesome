@@ -12,19 +12,19 @@ export default {
           header: 'Нестандартные задачи',
           content: 'Разработка дополнений для WordPress, сложные системы расчета стоимости заказа, прокладка маршрута и прочие непростые задачи - <span> это как раз то что мы любим </span>',
           animation: this.animRing,
-          isStop: true
+          runned: 0
         },
         {
           header: 'Продвинутый Front-end',
           content: 'Полноценные <span>SPA</span> и <span>PWA</span> под Ваши задачи на базе vue.js и сопуствущего стека технологий',
           animation: this.animFront,
-          isStop: true
+          runned: 0
         },
         {
           header: 'Чатботы',
           content: 'Системы оповещения, оформления заказа, отлеживания статуса, опросов и прочего на базе чат-платформы <span>Telegram</span>',
           animation: this.animBot,
-          isStop: true
+          runned: 0
         },
       ],
     }
@@ -32,7 +32,7 @@ export default {
   methods: {
     runAnim (event, key) {
       this.skills[key].animation(event.target, key)
-      this.skills[key].isStop = false
+      this.skills[key].runned++
     },
     animBot (target, key) {
       var frontIcon = document.getElementById('bot-icon')
@@ -91,7 +91,7 @@ export default {
         setTimeout( () => {
           stopCallbackCounter++
           if (stopCallbackCounter == all.length) {
-            this.skills[key].isStop = true
+            this.skills[key].runned--
           }
         }, 50) 
       }
@@ -140,7 +140,7 @@ export default {
         setTimeout( () => {
           stopCallbackCounter++
           if (stopCallbackCounter == all.length) {
-            this.skills[key].isStop = true
+            this.skills[key].runned--
           }
         }, 50) 
       }
@@ -318,7 +318,7 @@ export default {
         setTimeout( () => {
           stopCallbackCounter++
           if (stopCallbackCounter == all.length) {
-            this.skills[key].isStop = true
+            this.skills[key].runned--
           }
         }, 50) 
       }

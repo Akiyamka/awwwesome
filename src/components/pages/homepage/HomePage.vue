@@ -2,7 +2,7 @@
   <section id="hero">
     <div class="wrapper">
       <transition name="showttl">
-        <article class="main" v-show="skills[0].isStop && skills[1].isStop && skills[2].isStop">
+        <article class="main" v-show="!skills[0].runned && !skills[1].runned && !skills[2].runned">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 37.33">
             <path class="logo-main" d="M133.33,0V37.33H32V0ZM64,5.33H58.67V26.67H53.33V21.33H48v5.33H42.67V5.33H37.33V26.67h5.33V32H48V26.67h5.33V32h5.33V26.67H64Zm32,0H90.67V26.67H85.33V21.33H80v5.33H74.67V5.33H69.33V26.67h5.33V32H80V26.67h5.33V32h5.33V26.67H96Zm32,0h-5.33V26.67h-5.33V21.33H112v5.33h-5.33V5.33h-5.33V26.67h5.33V32H112V26.67h5.33V32h5.33V26.67H128Z" />
             <path class="logo-second" d="M21.33,5.33H0V32H5.33V26.67h16V32h5.33V5.33Zm0,16h-16V10.67h16Z" />
