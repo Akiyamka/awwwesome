@@ -1,0 +1,135 @@
+bkgColor = #0a0505
+hoverColor = #70D7FF
+activeColor = #0080B2
+mainColor = #FF4800
+
+@font-face 
+  font-family: JustSquare;
+  src: url(/static/JustSquare.otf)
+
+html
+body
+  margin: 0
+  padding: 0
+  height: 100%
+  background: url('./assets/squad.png'), bkgColor
+  font: 16px/1.6em 'Exo 2', sans-serif
+
+input,
+textarea,
+label
+  font: 16px/1.6em 'Exo 2', sans-serif
+
+::-webkit-input-placeholder
+  // Chrome
+  color: rgba(216,147,131,0.3)
+  font: 16px/1.6em 'Exo 2', sans-serif
+:-ms-input-placeholder 
+  // IE 10+
+  color: rgba(216,147,131,0.3)
+  font: 16px/1.6em 'Exo 2', sans-serif
+::-moz-placeholder
+  // Firefox 19+ *
+  color: rgba(216,147,131,0.3)
+  opacity: 1
+  font: 16px/1.6em 'Exo 2', sans-serif
+:-moz-placeholder
+// Firefox 4 - 18
+  color: rgba(216,147,131,0.3)
+  opacity: 1
+  font: 16px/1.6em 'Exo 2', sans-serif
+  
+h1
+  color: white
+  font: 36px/1.2em JustSquare, sans-serif
+  margin: 24px 0
+
+.wrapper
+  max-width: 1200px
+  padding: 24px
+  margin: 0 auto
+
+#app
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%
+  overflow: hidden
+  & > header
+    font-size: 0
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    align-items: center
+    position: absolute
+    width: 100%
+    z-index: 999
+    .logo
+      height: 34px
+      display: inline-block
+      vertical-align: middle
+      margin: 30px
+    nav
+      display: inline-block
+      font-size: 16px
+      vertical-align: -30%
+      margin: 30px
+      a
+        color: white
+        font: 16px/20px 'hooge 05_55 Cyr2', sans-serif
+        text-decoration: none
+        padding: .5em 1em
+        display: inline-block
+        word-spacing: 8px
+        &.current
+          color: mainColor
+        &:hover
+          background: mainColor
+          color: bkgColor
+        &:active
+          color: white
+    & + section
+        padding-top: 100px
+
+// .fade-enter-active
+// .fade-leave-active
+//   transition-property: all
+//   transition-duration: 2s
+//   position: relative
+
+// .fade-enter-active
+//   transition-delay: 2s
+
+// .fade-enter
+// .fade-leave-to
+//   position: relative
+//   left: 100%
+
+.fade-enter-active
+.fade-leave-active
+  transition-property: all
+  transition-duration: .35s
+  position: relative
+  transition-timing-function: ease-in
+// Анимация выхода
+.fade-leave
+  top: 0
+  opacity: 1
+
+.fade-leave-to
+  top: 100px
+  opacity: 0
+
+// Анимация входа
+.fade-enter
+  opacity: 0
+
+.fade-enter-to
+  opacity: 1
+
+// .fade-enter-active
+//   .fade-enter
+//   .fade-enter-to
+
+// .fade-leave-active
+//   .fade-leave
+//   .fade-leave-to
