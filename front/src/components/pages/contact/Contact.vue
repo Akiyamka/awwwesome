@@ -9,7 +9,7 @@
         <aw-textarea placeholder="Текст сообщения" v-model="text" ></aw-textarea>
         <div class="button-row">
           <router-link to="/"><aw-button alternate>Назад на главную</aw-button></router-link>
-          <aw-button>Отправить</aw-button>
+          <aw-button @click.native="send">Отправить</aw-button>
         </div>
       </div>
   </section>
