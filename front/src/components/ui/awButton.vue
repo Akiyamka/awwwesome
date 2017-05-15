@@ -43,7 +43,7 @@ export default {
       padding: .6em 2em
       text-transform: uppercase
       color: hsla(13,70%,50%,1)
-      font: 18px/24px 'hooge 05_55 Cyr2', sans-serif
+      font: 18px/24px 'Hooge', sans-serif
       transition: .2s ease all
       position: relative
       word-spacing: 8px
