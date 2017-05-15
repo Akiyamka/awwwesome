@@ -4,11 +4,11 @@ function paralax (event) {
   var backLayer = document.querySelector('.back.layer')
   var cursorRate = curPositionRate(event)
 
-  var horRate = (cursorRate.height - 50) / 100
-  var verRate = (cursorRate.width - 50) / 100
-  var weightRate = (Math.abs(verRate) + Math.abs(horRate)) * 10
+  var yRate = ((cursorRate.height - 50) / 100) * (-1)
+  var xRate = (cursorRate.width - 50) / 100
+  var weightRate = (Math.abs(xRate) + Math.abs(yRate)) * 10
 
-  backLayer.style.transform = 'rotate3d(' + horRate + ',0,' + verRate + ',' + weightRate + 'deg)'
+  backLayer.style.transform = 'rotate3d(' + yRate + ',' + xRate + ',0, ' + weightRate + 'deg)'
 }
 
 function curPositionRate (event) {
