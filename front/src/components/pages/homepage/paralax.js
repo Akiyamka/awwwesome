@@ -5,11 +5,12 @@ function paralax (event) {
   var backLayer = document.querySelector('.back.layer')
   var cursorRate = curPositionRate(event)
   // var rate = (cursorRate.width - 80) / 50
-  var horRate = 1 / (cursorRate.height - 50)
-  var verRate = 1 / (cursorRate.width - 50)
-  console.log(horRate)
+  var horRate = ((cursorRate.height - 50) ^ 3) / 100
+  var verRate = ((cursorRate.width - 50) ^ 3) / 100
+  var weight = (Math.abs(verRate) + Math.abs(horRate)) * 10
+  console.log(weight)
   // var rate2 = (cursorRate.height - 80) / 50
-  backLayer.style.transform = 'rotate3d(' + horRate + ',0,' + verRate + ',10deg)'
+  backLayer.style.transform = 'rotate3d(' + horRate + ',0,' + verRate + ',' + weight + 'deg)'
   // container.style.perspectiveOrigin = cursorRate.width + '% ' + cursorRate.height + '%'
 }
 
