@@ -1,17 +1,14 @@
 document.onmousemove = paralax
 
 function paralax (event) {
-  // var container = document.querySelector('#hero')
   var backLayer = document.querySelector('.back.layer')
   var cursorRate = curPositionRate(event)
-  // var rate = (cursorRate.width - 80) / 50
-  var horRate = ((cursorRate.height - 50) ^ 3) / 100
-  var verRate = ((cursorRate.width - 50) ^ 3) / 100
-  var weight = (Math.abs(verRate) + Math.abs(horRate)) * 10
-  console.log(weight)
-  // var rate2 = (cursorRate.height - 80) / 50
-  backLayer.style.transform = 'rotate3d(' + horRate + ',0,' + verRate + ',' + weight + 'deg)'
-  // container.style.perspectiveOrigin = cursorRate.width + '% ' + cursorRate.height + '%'
+
+  var horRate = (cursorRate.height - 50) / 100
+  var verRate = (cursorRate.width - 50) / 100
+  var weightRate = (Math.abs(verRate) + Math.abs(horRate)) * 10
+
+  backLayer.style.transform = 'rotate3d(' + horRate + ',0,' + verRate + ',' + weightRate + 'deg)'
 }
 
 function curPositionRate (event) {
