@@ -1,6 +1,7 @@
 import navblock from './navBlock'
 import KUTE from 'kute.js'
 import 'kute.js/kute-svg'
+import paralax from './paralax.js'
 
 export default {
   name: 'hello',

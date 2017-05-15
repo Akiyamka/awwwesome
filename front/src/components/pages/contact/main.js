@@ -6,6 +6,7 @@ import axios from 'axios'
 export default {
   data () {
     return {
+      state: 0,
       senderName: "",
       senderMail: "",
       text: "",
@@ -40,6 +41,6 @@ export default {
         source += String.fromCharCode( int32 >>> 16, int32 & 65535 );
       }
       return source.charCodeAt(i-1) == 0 ? source.slice(0, -1) : source;
-    }
+    },
   }
 }
