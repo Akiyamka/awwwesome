@@ -5,11 +5,11 @@ mainColor = #FF4800
 
 @import url('https://fonts.googleapis.com/css?family=Exo+2&subset=cyrillic');
 
-@font-face 
+@font-face
   font-family: JustSquare;
   src: url(/static/JustSquare.otf)
 
-@font-face 
+@font-face
   font-family: Hooge;
   src: url(/static/hooge.ttf)
 
@@ -30,7 +30,7 @@ label
   // Chrome
   color: rgba(216,147,131,0.3)
   font: 16px/1.6em 'Exo 2', sans-serif
-:-ms-input-placeholder 
+:-ms-input-placeholder
   // IE 10+
   color: rgba(216,147,131,0.3)
   font: 16px/1.6em 'Exo 2', sans-serif
@@ -44,7 +44,7 @@ label
   color: rgba(216,147,131,0.3)
   opacity: 1
   font: 16px/1.6em 'Exo 2', sans-serif
-  
+
 h1
   color: white
   font: 36px/1.2em JustSquare, sans-serif
@@ -88,11 +88,14 @@ h1
         word-spacing: 8px
         &.current
           color: mainColor
-        &:hover
+        &:hover:not(.disabled)
           background: mainColor
           color: bkgColor
         &:active
           color: white
+        &.disabled
+          opacity: .15
+          cursor: default
     & + section
         padding-top: 100px
 
