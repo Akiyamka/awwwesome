@@ -2,6 +2,7 @@ import navblock from './navBlock'
 import KUTE from 'kute.js'
 import 'kute.js/kute-svg'
 import paralax from './paralax.js'
+import Typed from '~/static/typed.min.js'
 
 export default {
   name: 'hello',
@@ -9,7 +10,7 @@ export default {
   data () {
     return {
       skills: [
-        { 
+        {
           header: 'Нестандартные задачи',
           content: 'Разработка дополнений для WordPress, сложные системы расчета стоимости заказа, прокладка маршрута и прочие непростые задачи - <span> это как раз то что мы любим </span>',
           animation: this.animRing,
@@ -94,7 +95,7 @@ export default {
           if (stopCallbackCounter == all.length) {
             this.skills[key].runned--
           }
-        }, 50) 
+        }, 50)
       }
 
       // Out animation
@@ -143,7 +144,7 @@ export default {
           if (stopCallbackCounter == all.length) {
             this.skills[key].runned--
           }
-        }, 50) 
+        }, 50)
       }
 
       // Out animation
@@ -193,7 +194,7 @@ export default {
         }, {
           duration: 3000,
           easing: 'easingQuarticInOut',
-          offset: 100 
+          offset: 100
         }
       );
 
@@ -231,7 +232,7 @@ export default {
           easing: 'linear',
         }
       )
-      
+
       var drawWide = KUTE.allFromTo(wide, {
           opacity: 0
         }, {
@@ -321,7 +322,7 @@ export default {
           if (stopCallbackCounter == all.length) {
             this.skills[key].runned--
           }
-        }, 50) 
+        }, 50)
       }
 
       // Out animation
@@ -364,6 +365,10 @@ export default {
 
   },
   mounted () {
-
+    // console.log('try to start typing', Typed)
+    // Typed.new(".main h1", {
+    //   strings: ["Test Test Test"],
+    //   typeSpeed: 0
+    // });
   }
 }
