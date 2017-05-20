@@ -20,7 +20,9 @@
       </nav>
     </header>
     <transition name="fade" mode="out-in">
-      <router-view></router-view>
+      <article>
+        <router-view></router-view>
+      </article>
     </transition>
     <div class="back layer">
       <div class="overlay"></div>
