@@ -42,6 +42,8 @@ export default {
 }
 </script>
 <style lang='stylus' scoped>
+@import './../../colorTheme'
+
 .box
   margin-top: 12px
   z-index: 1
@@ -53,22 +55,22 @@ section
 input
   background: none
   border: none
-  border-bottom: 1px solid hsla(17,100%,50%,.35)
+  border-bottom: 1px solid inp_border
   padding: 12px 0
-  color: hsla(11, 52%, 68%, .3)
+  color: inp_color
   margin-left: 12px
   transition: .2s ease all
   font-size: 16px
   min-width: 300px
   &:focus
     outline: none
-    border-bottom: 1px solid hsla(17,100%,50%,1)
+    border-bottom: 1px solid mainColor
   &:invalid
     outline: none
     box-shadow: none
-    border-bottom: 1px solid hsla(3,100%,50%,1)
+    border-bottom: 1px solid inp_error
 label
-  color: hsla(11, 52%, 68%, .3)
+  color: inp_color
   position: absolute
   left: 12px
   font-size: 16px
@@ -81,7 +83,7 @@ label
 
 .before
 .after
-  border-bottom: 1px solid hsla(17,100%,50%,1)
+  border-bottom: 1px solid mainColor
   position: absolute
   height: 0
   width: 0
@@ -89,14 +91,14 @@ label
   margin-left: 0
   visibility: hidden
   transition: .2s ease all
-  border-bottom: 1px solid hsla(17,100%,50%,.35)
+  border-bottom: 1px solid inp_border
 .before
   margin-left: 12px
-  border-left: 1px solid hsla(17,100%,50%,.35)
+  border-left: 1px solid inp_border
 .after
-  border-right: 1px solid hsla(17,100%,50%,.35)
+  border-right: 1px solid inp_border
   right: 0
-  
+
 .focus
 .filled
   input
@@ -116,16 +118,16 @@ label
 .filled
   input
     color: white
-    border-bottom: 1px solid hsla(17,100%,50%,.35)
+    border-bottom: 1px solid inp_border
   .after
   .before
-    border-bottom: 1px solid hsla(17,100%,50%,.35)
+    border-bottom: 1px solid inp_border
   .before
-    border-left: 1px solid hsla(17,100%,50%,.35)
+    border-left: 1px solid inp_border
   .after
-    border-right: 1px solid hsla(17,100%,50%,.35)
+    border-right: 1px solid inp_border
   label
-    color: hsla(11, 52%, 68%, .3)
+    color: inp_color
     position: absolute
     left: 0
     font-size: 14px
@@ -133,12 +135,12 @@ label
 
 .focus
   input
-    border-bottom: 1px solid hsla(17,100%,50%,1)
+    border-bottom: 1px solid mainColor
   .after
   .before
-    border-bottom: 1px solid hsla(17,100%,50%,1)
+    border-bottom: 1px solid mainColor
   .before
-    border-left: 1px solid hsla(17,100%,50%,1)
+    border-left: 1px solid mainColor
   .after
-    border-right: 1px solid hsla(17,100%,50%,1)
+    border-right: 1px solid mainColor
 </style>

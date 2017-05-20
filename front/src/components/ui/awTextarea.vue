@@ -46,6 +46,8 @@ export default {
 }
 </script>
 <style lang='stylus' scoped>
+@import './../../colorTheme'
+
 section
   padding: 12px
   transition: .2s ease padding
@@ -61,11 +63,11 @@ textarea
   color: white
   border: none
   width: 100%
-  border-bottom: 1px solid hsla(17,100%,50%,.35)
+  border-bottom: 1px solid inp_border
   box-sizing: border-box
   padding: 1em 0
   transition: .2s ease all
   &:focus
     outline: none
-    border-bottom: 1px solid hsla(17,100%,50%,1)
+    border-bottom: 1px solid mainColor
 </style>

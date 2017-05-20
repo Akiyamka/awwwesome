@@ -25,10 +25,7 @@ export default {
 }
 </script>
 <style lang='stylus' scoped>
-
-  bkgColor = hsla(17,100%,50%,.1)
-  hoverColor = hsla(17,100%,50%,1)
-  activeColor = #70D7FF
+  @import './../../colorTheme'
 
   .aw-button
     font-size: 0
@@ -38,11 +35,11 @@ export default {
     margin: 10px
 
     button
-      background: bkgColor
+      background: btn_bkgColor
       border: none
       padding: .6em 2em
       text-transform: uppercase
-      color: hsla(13,70%,50%,1)
+      color: btn_text
       font: 18px/24px 'Hooge', sans-serif
       transition: .2s ease all
       position: relative
@@ -78,7 +75,7 @@ export default {
     // hover-state
     &:hover
       button
-        background: hoverColor
+        background: mainColor
         color: white
       .border
         margin-top: -10px
@@ -86,7 +83,7 @@ export default {
         width: calc( 100% + 20px)
         height: calc( 100% + 20px)
         & > div
-          border: 1px solid hsla(17,100%,50%,1)
+          border: 1px solid mainColor
         .left
           border-right: none
           left: 0
@@ -107,5 +104,5 @@ export default {
 .alternate
   button
     background-color: transparent
-    color: hsla(13,70%,40%,1)
+    color: btn_text
 </style>
