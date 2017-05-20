@@ -25,7 +25,6 @@
             <circle class="cls-line-secondary" cx="99" cy="99" r="54" />
             <circle class="cls-wide" cx="99" cy="99" r="79" />
             <circle class="cls-line3" cx="99" cy="99" r="98" />
-            <image class="cls-glow-img" width="34" height="34" transform="translate(82 82)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAACXBIWXMAAAsSAAALEgHS3X78AAADX0lEQVRYR81YTUtbURAdq7W2lmrpB+2yWRS0Ioi0pYJp/CA1FAQL1m6kQouI+3YVYpbBLhRKwa0BcadGQZrW/Lbbc2bmJWmiCbowbzHcm3tnzpk7M3fee5EQgsRB2io0iUiXy40LxPbb4VzJkQh8UbpDSnow9oaM3MK8L7yR2yqcc417ptN9GafaKlQdeAGCcbkDsnthRh6EtDwG4ZPwTp6qcM417lGHurSJHLqyI1H4eTqeeFYGnOwZyIbxewzjyzAtr1Q4t7Vh1aEubSxaPdW0XcoRGuRhOC43AdoPoIcATSjRrKTClMyDcAkOLGP8rGLzJd2jjukm1JYYxMpf7ExrJ1JyV0+WlCEQJSGLIFsHWQ7jJn5vQ366bOua7a2rLm1oSwxitXDmPEdqTkwi92kZAWAa4F8wbmD8hXEPcoD5EcaSis0PdM90NtwmrRiTWkfmDDlaOkJPmU9LB08xArA5gK1BCpAi5Bin/ovxDFKGnLqUdc32jl23oLbEIJbVWL/XTNf5jkS3g8U1KY+Q3yE9jTnxA7IPwN8YK05a0jUjLPq85HsV19132zXFIiaxydFwmxod6dVKZ5ExvxbaggOWPQonTryF/Rwi8E2Fc67Z3kmoRWxfMQwr6UU/oFznOkIPefft2o0B/GNgnglspyPwIdZ3MGYhXyELGnZL34KvZV3nUG3MtqhYxCQ2OchFzv8ciWqDjSipPSCllW9Fx3xX9JQkmJLv7iQjNgp57jKqa9wznR2PTEUxiEVMYpODXHW14hHxtLArsiFZn2CoeTv+aIhnZNdPS6LXGuIM8p2SQZWM1lVC98zRrNuUHWPPUzmvHOQiZ6h3hHebzwm26KR2x0/B+sSBp4RFuOWhtzy/l/tadLyOFM65FtWX6W657Vmw676p2OQgFznzdpVrjvChxdy91ba9HKxBHVWr307zQVMwAZD6yq+/cRP6vBl13VyIbpv1mW3FJoe1h75mRwjChxdDOy0rwbolT3OqIbabMaf1wFSsamOq9QLOV7URDnrNzLnNbrA+U3LMFeUgFznj60hsUhOLYo3N9Y1PQ4tLi4+iEouHXmxeA+prpaMvRjVnYvCqGEUlFi/Pjc507HOi3pmOf2A1OtTRT87m6HT4I/wip5r/jriGvyWuQf4Bowe9ORNg3OEAAAAASUVORK5CYII=" />
             <circle class="cls-glow" cx="99" cy="99" r="9" />
           </svg>
         </div>
@@ -61,7 +60,6 @@
             <rect class="cls-rect" x="147" y="124" width="55" height="4" />
             <rect class="cls-rect" x="147" y="134" width="48.79" height="4" />
             <rect class="cls-rect" x="147" y="144" width="55" height="4" />
-            <rect class="cls-rect" x="147" y="176" width="55" height="4" />
             <rect class="cls-rect" x="139" y="84" width="4" height="4" />
             <rect class="cls-rect" x="139" y="94" width="4" height="4" />
             <rect class="cls-rect" x="139" y="104" width="4" height="4" />
@@ -104,7 +102,6 @@
         </navblock>
       </nav>
     </div>
-    <div class="back layer"></div>
   </section>
 </template>
 

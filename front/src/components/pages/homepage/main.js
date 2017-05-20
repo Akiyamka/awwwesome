@@ -132,7 +132,7 @@ export default {
 
       // In animation
       var drawLine = KUTE.allFromTo(lines, {draw: '0% 0%', opacity: 1 }, {draw: '0% 100%', opacity: 1 }, {duration: 3000, easing: 'easingQuarticInOut', offset: 100})
-      var drawRect = KUTE.allFromTo(rects, {opacity: 0}, {opacity: 0.2}, {duration: 2000, easing: 'easingQuarticInOut', offset: 100})
+      var drawRect = KUTE.allFromTo(rects, {opacity: 0}, {opacity: 1}, {duration: 2000, easing: 'easingQuarticInOut', offset: 100})
 
       // Since the callback 'nowAnimStoped' is triggered for each element in the variable 'all',
       // we only need to catch the last call
@@ -236,7 +236,7 @@ export default {
       var drawWide = KUTE.allFromTo(wide, {
           opacity: 0
         }, {
-          opacity: 0.3
+          opacity: 1
         }, {
           duration: 1500,
           easing: 'linear',
@@ -248,8 +248,8 @@ export default {
         }, {
           opacity: 1
         }, {
-          duration: 500,
-          easing: 'easingQuarticOut',
+          duration: 1000,
+          easing: 'easingCubicInOut',
         }
       )
 
@@ -285,7 +285,7 @@ export default {
       var loopWide = () => setTimeout( () => pulseWide.start(), 50 );
 
       var pulseWide =  KUTE.allFromTo(wide, {
-          opacity: 0.3
+          opacity: 1
         }, {
           opacity: 0
         }, {

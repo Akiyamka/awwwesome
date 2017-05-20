@@ -31,6 +31,8 @@ export default {
 </script>
 
 <style lang="stylus">
+  @import './../../../colorTheme'
+
   header
     font: 26px/1.2em 'JustSquare', sans-serif
 
@@ -38,7 +40,7 @@ export default {
     height: 0px
     overflow: hidden
     transition: .3s ease height
-    
+
   .skill-block
     border-top: 1px solid white
     margin: 0 3% 0 0
@@ -52,18 +54,18 @@ export default {
       font: 16px/1.6em 'Exo 2', sans-serif
       padding: 1.6em 0
       text-align: left
-      color: #7b5f58
+      color: textColor
       opacity: 0
       box-sizing: border-box
       overflow: hidden
       transition: .1s ease opacity 0s
       & > span
-        color: #a78c85
+        color: textColorSecond
     &:last-child
       margin: 0
     &:hover
-      color: #FF4800
-      border-top: 1px solid #FF4800
+      color: mainColor
+      border-top: 1px solid mainColor
       article
         opacity: 1
         transition: .3s ease opacity .2s

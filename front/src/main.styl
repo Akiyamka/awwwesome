@@ -24,20 +24,20 @@ label
 
 ::-webkit-input-placeholder
   // Chrome
-  color: textColor
+  color: inp_placeholder
   font: 16px/1.6em 'Exo 2', sans-serif
 :-ms-input-placeholder
   // IE 10+
-  color: textColor
+  color: inp_placeholder
   font: 16px/1.6em 'Exo 2', sans-serif
 ::-moz-placeholder
   // Firefox 19+ *
-  color: textColor
+  color: inp_placeholder
   opacity: 1
   font: 16px/1.6em 'Exo 2', sans-serif
 :-moz-placeholder
 // Firefox 4 - 18
-  color: textColor
+  color: inp_placeholder
   opacity: 1
   font: 16px/1.6em 'Exo 2', sans-serif
 
@@ -56,6 +56,8 @@ h1
   -moz-osx-font-smoothing: grayscale;
   height: 100%
   overflow: hidden
+  perspective: 600px
+  transform-style: preserve-3d
   & > header
     font-size: 0
     display: flex
@@ -76,7 +78,7 @@ h1
       vertical-align: -30%
       margin: 30px
       a
-        color: white
+        color: secondColor
         font: 16px/20px 'Hooge', sans-serif
         text-decoration: none
         padding: .5em 1em
@@ -138,3 +140,23 @@ h1
 // .fade-leave-active
 //   .fade-leave
 //   .fade-leave-to
+
+.layer
+  width: 150%
+  height: 150%
+  margin-right: -25%
+  margin-left: -25%
+  position: absolute
+  top: -25%
+  z-index: -1
+
+.back
+  left: 0
+  transform: rotate3d(1,0,0,30deg)
+  background: url('./assets/' + squad_alt + '.png')
+  opacity: .8
+  transition: 1s ease transform
+  .overlay
+    width: 100%
+    height: 100%
+    background: bkgImageOverlay

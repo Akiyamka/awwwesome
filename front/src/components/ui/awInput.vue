@@ -70,7 +70,7 @@ input
     box-shadow: none
     border-bottom: 1px solid inp_error
 label
-  color: inp_color
+  color: inp_placeholder
   position: absolute
   left: 12px
   font-size: 16px
@@ -102,7 +102,7 @@ label
 .focus
 .filled
   input
-    color: white
+    color: inp_text
   .after
   .before
     height: 4px
@@ -117,7 +117,7 @@ label
 
 .filled
   input
-    color: white
+    color: inp_text
     border-bottom: 1px solid inp_border
   .after
   .before

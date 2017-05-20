@@ -60,7 +60,7 @@ section
 textarea
   resize: none
   background: transparent
-  color: white
+  color: inp_text
   border: none
   width: 100%
   border-bottom: 1px solid inp_border

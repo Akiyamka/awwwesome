@@ -75,7 +75,7 @@ export default {
     // hover-state
     &:hover
       button
-        background: mainColor
+        background: btn_hover
         color: white
       .border
         margin-top: -10px
@@ -99,7 +99,7 @@ export default {
     // active-state
     &:active
       button
-        background: activeColor
+        background: btn_activeColor
 
 .alternate
   button
