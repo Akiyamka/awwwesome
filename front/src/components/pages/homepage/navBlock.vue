@@ -42,7 +42,7 @@ export default {
     transition: .3s ease height
 
   .skill-block
-    border-top: 1px solid white
+    border-top: 1px solid secondColor
     margin: 0 3% 0 0
     padding: 30px 0
     box-sizing: border-box
@@ -50,6 +50,9 @@ export default {
     width: 31%
     cursor: pointer
     z-index: 10
+    @media (max-width: 580px)
+      width: 100%
+      margin: 0
     article
       font: 16px/1.6em 'Exo 2', sans-serif
       padding: 1.6em 0
