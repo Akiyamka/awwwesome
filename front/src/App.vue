@@ -19,11 +19,11 @@
         <router-link to="/contact">Написать нам</router-link>
       </nav>
     </header>
-    <transition name="fade" mode="out-in">
       <article>
-        <router-view></router-view>
+        <transition name="fade" mode="out-in">
+          <router-view></router-view>
+        </transition>
       </article>
-    </transition>
     <div class="back layer">
       <div class="overlay"></div>
     </div>
