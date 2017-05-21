@@ -9,6 +9,8 @@ export default {
   components: { navblock },
   data () {
     return {
+      mobileModeOff: true,
+      windowWidth: 0,
       skills: [
         {
           header: 'Нестандартные задачи',
@@ -364,11 +366,35 @@ export default {
     }
 
   },
-  mounted () {
-    // console.log('try to start typing', Typed)
-    // Typed.new(".main h1", {
-    //   strings: ["Test Test Test"],
-    //   typeSpeed: 0
-    // });
+  created () {
+    // Optimazed resize
+    // https://developer.mozilla.org/ru/docs/Web/Events/resize
+    (function() {
+        var throttle = function(type, name, obj) {
+            obj = obj || window;
+            var running = false;
+            var func = function() {
+                if (running) { return; }
+                running = true;
+                requestAnimationFrame(function() {
+                    obj.dispatchEvent(new CustomEvent(name));
+                    running = false;
+                });
+            };
+            obj.addEventListener(type, func);
+        };
+
+        throttle("resize", "optimizedResize");
+    })();
+
+    window.addEventListener("optimizedResize", () => {
+      this.windowWidth = window.innerWidth;
+      if (this.windowWidth < 580) {
+        this.mobileModeOff = false
+      } else {
+        this.mobileModeOff = true
+      }
+        console.log(this.mobileModeOff)
+    });
   }
 }
